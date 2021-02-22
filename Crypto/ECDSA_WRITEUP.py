@@ -76,7 +76,7 @@ I would advise you to understand the principle.
 Mathematical part:
 
 Let H1 and H2 be the hashes, priv the private key we are searching for, s1 the first number of first signature, s2 the first number of second signature,
-order the order, K the unknown value generated randomly between 1 and N-1, and r the unique second number of both signatures.
+order the order, K the unknown value generated randomly between 1 and order-1, and r the unique second number of both signatures.
 
 We have 2 equations :
 s1 = k^(-1) * (hash1 + priv *R)  % order (1)
