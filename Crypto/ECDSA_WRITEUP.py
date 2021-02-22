@@ -66,7 +66,7 @@ Encrypted Flag:
 b'f3ccfd5877ec7eb886d5f9372e97224c43f4412ca8eaeb567f9b20dd5e0aabd5
 
 
-/*
+"""
 So, the goal is to find the private key to decrypt the encrypted flag.
 After analyzing the code, we notice that both hashes of the output used the same nonce so we guess that's a nonce reuse.
 For the little story, a vulnerability of this type was found in Sony's Playstation 3 https://www.bbc.com/news/technology-12116051
@@ -89,12 +89,11 @@ So we have here 1 equation and 1 unknow value, we just have to isolate it and it
 priv = (s2 * hash1 - s2 * hash2) * (r*(s1-s2)**-1 %order))
 (r*(s1-s2)**-1 %order)) is the inverse or (r*(s1-s2)) modulo order, that means the number that satisfies r*(s1-s2) = 1 % n
 Code of the function :
-*/
-
+"""
 def nonce_reuse(order, s1, s2, r, hash1, hash2):
     return ((((s2 * hash1)) - ((s1 * hash2))) * pow(r*(s1-s2),-1,order))%order
 
-/*
+"""
 To go further :
 
 You can crack the key too knowing K.
@@ -104,7 +103,7 @@ https://medium.com/asecuritysite-when-bob-met-alice/cracking-ecdsa-with-a-leak-o
 
 
 
-*/
+"""
 
 
 
