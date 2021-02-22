@@ -87,7 +87,7 @@ So it means that (if we multiply by K (1) and (2) and divide (1) by s1 and (2) b
 
 So we have here 1 equation and 1 unknow value, we just have to isolate it and it gives us :
 priv = (s2 * hash1 - s2 * hash2) * (r*(s1-s2)**-1 %order))
-(r*(s1-s2)**-1 %order)) is the inverse or (r*(s1-s2)) modulo order, that means the number that satisfies r*(s1-s2) = 1 % order
+(r*(s1-s2)**-1 %order)) is the inverse of (r*(s1-s2)) modulo order, that means the number that satisfies r*(s1-s2) = 1 % order
 Code of the function :
 """
 def nonce_reuse(order, s1, s2, r, hash1, hash2):
