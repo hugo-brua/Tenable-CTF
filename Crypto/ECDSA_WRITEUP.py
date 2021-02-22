@@ -1,6 +1,6 @@
 #ECDSA IMPLEMENTATION
 
-#What we had was this :
+#What we had:
 import ecdsa
 import random
 from Crypto.Cipher import AES
